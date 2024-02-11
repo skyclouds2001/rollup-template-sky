@@ -58,6 +58,7 @@
     "build": "rollup --config --bundleConfigAsCjs"
   },
   "devDependencies": {
-    "pnpm": "8.15.0"
+    "pnpm": "8.15.0",
+    "rollup": "^4.10.0"
   }
 }
