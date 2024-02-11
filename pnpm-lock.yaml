@@ -1,0 +1,19 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+devDependencies:
+  pnpm:
+    specifier: 8.15.0
+    version: 8.15.0
+
+packages:
+
+  /pnpm@8.15.0:
+    resolution: {integrity: sha512-6kVRfVKF0SPqwCw3k1Bfof1tqQovxg0ejZ4MHpKSiG7Pr/UT8GK50cyAIbuGFQM7GsW+o7LuP8FlptcDS75rAw==}
+    engines: {node: '>=16.14'}
+    deprecated: This version switched to a hashing algorithm for side-effects cache keys that didn't solve the long string error it was supposed to fix. Upgrade to v8.15.1 or newer, which has the fix.
+    hasBin: true
+    dev: true
