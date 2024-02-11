@@ -58,6 +58,7 @@
     "build": "rollup --config --bundleConfigAsCjs"
   },
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
     "pnpm": "8.15.0",
     "rollup": "^4.10.0"
   }

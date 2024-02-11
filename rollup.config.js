@@ -1,4 +1,5 @@
 import { defineConfig } from 'rollup'
+import terser from '@rollup/plugin-terser'
 
 export default defineConfig({
   input: 'src/index.ts',
@@ -20,5 +21,7 @@ export default defineConfig({
       name: 'rollup-template-sky',
     },
   ],
-  plugins: [],
+  plugins: [
+    terser(),
+  ],
 })
