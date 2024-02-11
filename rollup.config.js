@@ -16,12 +16,11 @@ export default defineConfig({
     {
       file: 'dist/index.umd.js',
       format: 'umd',
-      globals: {
-        vue: 'Vue',
-      },
+      globals: {},
       name: 'rollup-template-sky',
     },
   ],
+  external: [],
   plugins: [
     typescript(),
     terser(),
