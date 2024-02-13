@@ -1,4 +1,5 @@
 import { defineConfig } from 'rollup'
+import alias from '@rollup/plugin-alias'
 import commonjs from '@rollup/plugin-commonjs'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
@@ -24,6 +25,9 @@ export default defineConfig({
   ],
   external: [],
   plugins: [
+    alias({
+      entries: {},
+    }),
     commonjs(),
     nodeResolve(),
     typescript(),
