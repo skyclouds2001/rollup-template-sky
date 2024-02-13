@@ -1,8 +1,8 @@
 import { defineConfig } from 'rollup'
 import alias from '@rollup/plugin-alias'
-import commonjs from '@rollup/plugin-commonjs'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
+import commonjs from '@rollup/plugin-commonjs'
 import terser from '@rollup/plugin-terser'
 
 export default defineConfig({
@@ -28,9 +28,9 @@ export default defineConfig({
     alias({
       entries: {},
     }),
-    commonjs(),
     nodeResolve(),
     typescript(),
+    commonjs(),
     terser(),
   ],
 })
