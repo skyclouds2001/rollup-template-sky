@@ -3,9 +3,9 @@ import { defineConfig } from 'rollup'
 import virtual from '@rollup/plugin-virtual'
 import alias from '@rollup/plugin-alias'
 import nodeResolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
 import replace from '@rollup/plugin-replace'
 import typescript from '@rollup/plugin-typescript'
-import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
 import terser from '@rollup/plugin-terser'
 
@@ -41,11 +41,11 @@ export default defineConfig({
       },
     }),
     nodeResolve(),
+    commonjs(),
     replace({
       __BUILD_DATE__: Date.now(),
     }),
     typescript(),
-    commonjs(),
     json(),
     terser(),
   ],
