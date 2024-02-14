@@ -33,7 +33,7 @@ export default defineConfig({
   external: [],
   plugins: [
     virtual({
-      virtual: 'export default 0',
+      module: 'export default 0',
     }),
     alias({
       entries: {
