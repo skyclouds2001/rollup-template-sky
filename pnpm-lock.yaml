@@ -23,6 +23,9 @@ devDependencies:
   '@rollup/plugin-typescript':
     specifier: ^11.1.6
     version: 11.1.6(rollup@4.10.0)(tslib@2.6.2)(typescript@5.3.3)
+  '@rollup/plugin-virtual':
+    specifier: ^3.0.2
+    version: 3.0.2(rollup@4.10.0)
   pnpm:
     specifier: 8.15.0
     version: 8.15.0
@@ -170,6 +173,18 @@ packages:
       rollup: 4.10.0
       tslib: 2.6.2
       typescript: 5.3.3
+    dev: true
+
+  /@rollup/plugin-virtual@3.0.2(rollup@4.10.0):
+    resolution: {integrity: sha512-10monEYsBp3scM4/ND4LNH5Rxvh3e/cVeL3jWTgZ2SrQ+BmUoQcopVQvnaMcOnykb1VkxUFuDAN+0FnpTFRy2A==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      rollup: 4.10.0
     dev: true
 
   /@rollup/pluginutils@5.1.0(rollup@4.10.0):

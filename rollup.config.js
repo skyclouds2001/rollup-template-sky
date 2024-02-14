@@ -1,5 +1,6 @@
 import path from 'node:path'
 import { defineConfig } from 'rollup'
+import virtual from '@rollup/plugin-virtual'
 import alias from '@rollup/plugin-alias'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
@@ -27,6 +28,9 @@ export default defineConfig({
   ],
   external: [],
   plugins: [
+    virtual({
+      virtual: 'export default 0',
+    }),
     alias({
       entries: {
         '@': path.resolve(__dirname, 'src'),
