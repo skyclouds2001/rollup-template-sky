@@ -14,14 +14,17 @@ export default defineConfig({
     {
       file: 'dist/index.es.js',
       format: 'es',
+      sourcemap: true,
     },
     {
       file: 'dist/index.cjs.js',
       format: 'cjs',
+      sourcemap: true,
     },
     {
       file: 'dist/index.umd.js',
       format: 'umd',
+      sourcemap: true,
       globals: {},
       name: 'rollup-template-sky',
     },
