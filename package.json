@@ -2,7 +2,7 @@
   "name": "rollup-template-sky",
   "private": true,
   "version": "0.0.3",
-  "description": "A template project for rollup",
+  "description": "An opinionated rollup starter template",
   "keywords": [
     "template",
     "rollup"
