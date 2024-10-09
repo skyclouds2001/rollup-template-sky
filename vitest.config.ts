@@ -7,7 +7,7 @@ export default defineConfig({
     include: ['tests/**'],
     exclude: ['node_modules/**', 'dist/**', '.{idea,fleet,vscode,git}/**', '*.config.*'],
     watch: false,
-    environment: 'jsdom',
+    environment: 'node',
     reporters: ['default', 'json', 'html'],
     outputFile: {
       json: './vitest-report/report.json',
