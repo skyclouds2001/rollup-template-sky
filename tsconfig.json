@@ -9,20 +9,17 @@
     "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "paths": {},
     "resolveJsonModule": true,
-    "rootDir": "src",
+    "rootDir": ".",
     "types": [],
 
-    "declaration": true,
-    "declarationDir": "dist",
     "newLine": "lf",
     "noEmit": true,
     "outDir": "dist",
     "removeComments": true,
     "sourceMap": true,
 
-    "allowJs": false,
+    "allowJs": true,
 
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -31,6 +28,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "jsx": "preserve",
+    "jsxImportSource": "react",
     "lib": ["ESNext", "DOM", "DOM.Iterable", "WebWorker", "WebWorker.ImportScripts", "Webworker.Iterable"],
     "target": "ESNext",
     "useDefineForClassFields": false,
@@ -40,6 +38,11 @@
 
     "skipLibCheck": true
   },
-  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.vue"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*", "tests/**/*", "src/**/*.json"],
+  "exclude": ["node_modules/**/*", "dist/**/*"],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
