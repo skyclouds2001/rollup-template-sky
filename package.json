@@ -49,8 +49,9 @@
     "pnpm": ">=8.11.0"
   },
   "scripts": {
-    "dev": "vite ./playground",
+    "dev": "rollup --config --watch",
     "build": "rollup --config",
+    "preview": "vite ./playground",
     "lint": "eslint --fix . && prettier --write . && markdownlint --fix **/*.md && tsc --noEmit",
     "test": "cross-env NODE_ENV=test vitest",
     "clean": "rimraf node_modules && rimraf dist",
