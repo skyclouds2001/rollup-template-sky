@@ -37,7 +37,7 @@ export default defineConfig({
     }),
     alias({
       entries: {
-        '@': path.resolve(__dirname, 'src'),
+        '@': path.resolve(process.cwd(), 'src'),
       },
     }),
     nodeResolve(),
