@@ -5,7 +5,7 @@ export default defineConfig({
   test: {
     root: '.',
     include: ['tests/**'],
-    exclude: ['node_modules/**', 'dist/**', '.{idea,fleet,vscode,git}/**', '*.config.*'],
+    exclude: ['node_modules/**', 'dist/**', '.{idea,fleet,vscode,git}/**', '*.config.*', '*.cache/**'],
     watch: false,
     environment: 'node',
     reporters: ['default', 'json', 'html'],
