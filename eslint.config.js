@@ -1,6 +1,6 @@
 import js from '@eslint/js'
 import globals from 'globals'
-// import standard  from 'eslint-config-standard'
+import standard from 'eslint-config-standard'
 import prettier from 'eslint-config-prettier'
 import nodePlugin from 'eslint-plugin-n'
 import promisePlugin from 'eslint-plugin-promise'
@@ -18,7 +18,6 @@ export default [
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
   jsdocPlugin.configs['flat/recommended-typescript'],
-  prettier,
   {
     name: 'custom',
     files: ['**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'],
@@ -49,7 +48,7 @@ export default [
     },
     plugins: {},
     rules: {
-      // ...standard.rules,
+      ...standard.rules,
       'n/no-missing-import': 'off',
       'n/no-missing-require': 'off',
     },
@@ -73,4 +72,9 @@ export default [
     },
     ...vitestPlugin.configs.recommended,
   },
+  {
+    name: 'custom-ignore',
+    ignores: ['node_modules/**', 'dist/**', '.{idea,fleet,vscode,git}/**', '*.config.*', '*.cache/**'],
+  },
+  prettier,
 ]
