@@ -5,7 +5,8 @@
   "description": "An opinionated rollup starter template",
   "keywords": [
     "template",
-    "rollup"
+    "rollup",
+    "typescript"
   ],
   "type": "module",
   "main": "./dist/index.umd.js",
