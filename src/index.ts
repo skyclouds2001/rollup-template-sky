@@ -1,5 +1,5 @@
-import { sum } from './sample'
+import sum from '@/sample'
+// eslint-disable-next-line import/no-unresolved
+import num from 'virtual-module'
 
-sum(1, 2)
-
-console.log(sum(3, 4))
+console.log(sum(3, num))

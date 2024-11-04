@@ -33,11 +33,11 @@ export default defineConfig({
   external: [],
   plugins: [
     virtual({
-      module: 'export default 0',
+      'virtual-module': `export default 10`,
     }),
     alias({
       entries: {
-        '@': path.resolve(process.cwd(), 'src'),
+        '@': path.resolve('.', 'src'),
       },
     }),
     nodeResolve(),
