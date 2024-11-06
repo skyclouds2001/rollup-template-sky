@@ -40,8 +40,13 @@ export default defineConfig({
         '@': path.resolve('.', 'src'),
       },
     }),
-    nodeResolve(),
-    commonjs(),
+    nodeResolve({
+      browser: true,
+      extensions: ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx', '.json', '.node'],
+    }),
+    commonjs({
+      extensions: ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx', '.json', '.node'],
+    }),
     replace({
       __BUILD_DATE__: Date.now(),
     }),
