@@ -7,6 +7,7 @@ import image from '@rollup/plugin-image'
 import wasm from '@rollup/plugin-wasm'
 import json from '@rollup/plugin-json'
 import yaml from '@rollup/plugin-yaml'
+import graphql from '@rollup/plugin-graphql'
 import nodeResolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
 import commonjs from '@rollup/plugin-commonjs'
@@ -59,6 +60,7 @@ export default defineConfig({
       preferConst: true,
     }),
     yaml(),
+    graphql(),
     nodeResolve({
       browser: true,
       extensions: ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx', '.json', '.node'],
