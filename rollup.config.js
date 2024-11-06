@@ -40,6 +40,18 @@ export default defineConfig({
         '@': path.resolve('.', 'src'),
       },
     }),
+    replace({
+      objectGuards: true,
+      preventAssignment: true,
+      sourceMap: true,
+      values: {
+        __BUILD_DATE__: Date.now(),
+      },
+    }),
+    json({
+      namedExports: false,
+      preferConst: true,
+    }),
     nodeResolve({
       browser: true,
       extensions: ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx', '.json', '.node'],
@@ -47,11 +59,7 @@ export default defineConfig({
     commonjs({
       extensions: ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx', '.json', '.node'],
     }),
-    replace({
-      __BUILD_DATE__: Date.now(),
-    }),
     typescript(),
-    json(),
     terser(),
   ],
 })
