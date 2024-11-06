@@ -49,6 +49,7 @@ export default defineConfig({
       },
     }),
     json({
+      compact: true,
       namedExports: false,
       preferConst: true,
     }),
@@ -56,10 +57,10 @@ export default defineConfig({
       browser: true,
       extensions: ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx', '.json', '.node'],
     }),
+    typescript(),
     commonjs({
       extensions: ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx', '.json', '.node'],
     }),
-    typescript(),
     terser(),
   ],
 })
