@@ -2,11 +2,12 @@ import path from 'node:path'
 import { defineConfig } from 'rollup'
 import virtual from '@rollup/plugin-virtual'
 import alias from '@rollup/plugin-alias'
-import nodeResolve from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
 import replace from '@rollup/plugin-replace'
-import typescript from '@rollup/plugin-typescript'
 import json from '@rollup/plugin-json'
+import yaml from '@rollup/plugin-yaml'
+import nodeResolve from '@rollup/plugin-node-resolve'
+import typescript from '@rollup/plugin-typescript'
+import commonjs from '@rollup/plugin-commonjs'
 import terser from '@rollup/plugin-terser'
 
 export default defineConfig({
@@ -53,6 +54,7 @@ export default defineConfig({
       namedExports: false,
       preferConst: true,
     }),
+    yaml(),
     nodeResolve({
       browser: true,
       extensions: ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx', '.json', '.node'],

@@ -4,3 +4,8 @@ declare module 'virtual-module' {
 }
 
 declare const __BUILD_DATE__: number
+
+declare module '*.yaml' {
+  const data: Record<string, string | number>
+  export default data
+}
