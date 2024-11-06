@@ -4,6 +4,7 @@ import virtual from '@rollup/plugin-virtual'
 import alias from '@rollup/plugin-alias'
 import replace from '@rollup/plugin-replace'
 import image from '@rollup/plugin-image'
+import wasm from '@rollup/plugin-wasm'
 import json from '@rollup/plugin-json'
 import yaml from '@rollup/plugin-yaml'
 import nodeResolve from '@rollup/plugin-node-resolve'
@@ -51,6 +52,7 @@ export default defineConfig({
       },
     }),
     image(),
+    wasm(),
     json({
       compact: true,
       namedExports: false,
