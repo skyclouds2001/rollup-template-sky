@@ -9,7 +9,9 @@
     "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "paths": {},
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "resolveJsonModule": true,
     "rootDir": ".",
     "types": [],
@@ -38,7 +40,7 @@
 
     "skipLibCheck": true
   },
-  "include": ["src/**/*", "tests/**/*"],
+  "include": ["src/**/*", "tests/**/*", "src/**/*.json"],
   "exclude": ["node_modules/**/*", "dist/**/*"],
   "references": [
     {

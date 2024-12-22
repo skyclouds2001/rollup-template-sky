@@ -2,11 +2,16 @@ import path from 'node:path'
 import { defineConfig } from 'rollup'
 import virtual from '@rollup/plugin-virtual'
 import alias from '@rollup/plugin-alias'
-import nodeResolve from '@rollup/plugin-node-resolve'
-import commonjs from '@rollup/plugin-commonjs'
 import replace from '@rollup/plugin-replace'
-import typescript from '@rollup/plugin-typescript'
+import image from '@rollup/plugin-image'
+import wasm from '@rollup/plugin-wasm'
 import json from '@rollup/plugin-json'
+import yaml from '@rollup/plugin-yaml'
+import graphql from '@rollup/plugin-graphql'
+import dsv from '@rollup/plugin-dsv'
+import nodeResolve from '@rollup/plugin-node-resolve'
+import typescript from '@rollup/plugin-typescript'
+import commonjs from '@rollup/plugin-commonjs'
 import terser from '@rollup/plugin-terser'
 
 export default defineConfig({
@@ -33,20 +38,39 @@ export default defineConfig({
   external: [],
   plugins: [
     virtual({
-      module: 'export default 0',
+      'virtual-module': `export default 10`,
     }),
     alias({
       entries: {
-        '@': path.resolve(process.cwd(), 'src'),
+        '@': path.resolve('.', 'src'),
       },
     }),
-    nodeResolve(),
-    commonjs(),
     replace({
-      __BUILD_DATE__: Date.now(),
+      objectGuards: true,
+      preventAssignment: true,
+      sourceMap: true,
+      values: {
+        __BUILD_DATE__: Date.now(),
+      },
+    }),
+    image(),
+    wasm(),
+    json({
+      compact: true,
+      namedExports: false,
+      preferConst: true,
+    }),
+    yaml(),
+    graphql(),
+    dsv(),
+    nodeResolve({
+      browser: true,
+      extensions: ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx', '.json', '.node'],
     }),
     typescript(),
-    json(),
+    commonjs({
+      extensions: ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx', '.json', '.node'],
+    }),
     terser(),
   ],
 })

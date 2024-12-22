@@ -4,7 +4,7 @@ export default defineConfig({
   plugins: [],
   test: {
     root: '.',
-    include: ['tests/**'],
+    include: ['tests/unit/**'],
     exclude: ['node_modules/**', 'dist/**', '.{idea,fleet,vscode,git}/**', '*.config.*', '*.cache/**'],
     watch: false,
     environment: 'node',
