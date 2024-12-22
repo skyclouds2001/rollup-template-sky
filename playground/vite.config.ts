@@ -3,17 +3,13 @@ import { defineConfig, loadEnv } from 'vite'
 const env = loadEnv(process.env.NODE_ENV ?? 'development', '.')
 
 export default defineConfig({
-  plugins: [],
-  resolve: {
-    alias: {},
-  },
   css: {
     preprocessorMaxWorkers: true,
     devSourcemap: true,
   },
   json: {
     namedExports: false,
-    stringify: true,
+    stringify: 'auto',
   },
   server: {
     host: env.VITE_DEV_SERVER_HOST ?? 'localhost',
