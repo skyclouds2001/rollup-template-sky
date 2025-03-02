@@ -67,7 +67,9 @@ export default defineConfig({
       browser: true,
       extensions: ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx', '.json', '.node'],
     }),
-    typescript(),
+    typescript({
+      include: ['src/**/*', 'src/**/*.json'],
+    }),
     commonjs({
       extensions: ['.cjs', '.mjs', '.js', '.jsx', '.cts', '.mts', '.ts', '.tsx', '.json', '.node'],
     }),
