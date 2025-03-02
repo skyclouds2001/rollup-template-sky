@@ -64,7 +64,7 @@ An opinionated rollup starter template.
 - [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) and MarkdownLint for lint and enforce code and documentation style
 - [Commitlint](https://commitlint.js.org/) and [Commitizen](https://commitizen-tools.github.io/commitizen/) for enforce git commit format
 - Changeset for automatically generate version change documentation
-- [Vitest](https://vitest.dev/) for  test.
+- [Vitest](https://vitest.dev/) for test.
 - Basic Configuration for GitHub Actions
 
 ## Getting Started
