@@ -1,7 +1,9 @@
 import js from '@eslint/js'
+import json from '@eslint/json'
+import markdown from '@eslint/markdown'
 import globals from 'globals'
 import standard from 'eslint-config-standard'
-import prettier from 'eslint-config-prettier'
+import prettierConfig from 'eslint-config-prettier'
 import nodePlugin from 'eslint-plugin-n'
 import promisePlugin from 'eslint-plugin-promise'
 import importPlugin from 'eslint-plugin-import'
@@ -11,14 +13,11 @@ import playwrightPlugin from 'eslint-plugin-playwright'
 import typescript from 'typescript-eslint'
 
 export default [
-  js.configs.recommended,
   ...typescript.configs.recommended,
   ...typescript.configs.stylistic,
-  nodePlugin.configs['flat/recommended'],
   promisePlugin.configs['flat/recommended'],
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
-  jsdocPlugin.configs['flat/recommended-typescript'],
   {
     name: 'custom',
     files: ['**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'],
@@ -59,7 +58,17 @@ export default [
         node: true,
       },
     },
+    ...js.configs.recommended,
+    ...nodePlugin.configs['flat/recommended'],
+    ...jsdocPlugin.configs['flat/recommended-typescript'],
   },
+  {
+    name: 'custom-json',
+    files: ['**/*.json'],
+    language: 'json/json',
+    ...json.configs.recommended,
+  },
+  ...markdown.configs.recommended,
   {
     name: 'custom-test-unit',
     files: ['**/tests/unit/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'],
@@ -79,5 +88,5 @@ export default [
     name: 'custom-ignore',
     ignores: ['node_modules/**', 'dist/**', '.{idea,fleet,vscode,git}/**', '*.config.*', '*.cache/**'],
   },
-  prettier,
+  prettierConfig,
 ]
