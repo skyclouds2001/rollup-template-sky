@@ -1,3 +1,4 @@
+import { defineConfig } from 'eslint/config'
 import js from '@eslint/js'
 import json from '@eslint/json'
 import markdown from '@eslint/markdown'
@@ -12,7 +13,7 @@ import vitestPlugin from 'eslint-plugin-vitest'
 import playwrightPlugin from 'eslint-plugin-playwright'
 import typescript from 'typescript-eslint'
 
-export default [
+export default defineConfig([
   ...typescript.configs.recommended,
   ...typescript.configs.stylistic,
   promisePlugin.configs['flat/recommended'],
@@ -89,4 +90,4 @@ export default [
     ignores: ['node_modules/**', 'dist/**', '.{idea,fleet,vscode,git}/**', '*.config.*', '*.cache/**'],
   },
   prettierConfig,
-]
+])
