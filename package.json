@@ -57,7 +57,7 @@
     "dev": "rollup --config --watch",
     "build": "rollup --config",
     "preview": "vite ./playground",
-    "lint": "cross-env ESLINT_CONFIG_PRETTIER_NO_DEPRECATED=0 && eslint --fix . && prettier --write . && markdownlint --fix **/*.md && tsc --noEmit",
+    "lint": "eslint --fix . && prettier --write . && markdownlint --fix **/*.md && tsc --noEmit",
     "test": "cross-env NODE_ENV=test vitest && playwright test",
     "clean": "rimraf node_modules && rimraf dist",
     "changeset": "changeset",
