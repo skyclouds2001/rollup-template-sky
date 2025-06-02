@@ -1,5 +1,29 @@
 # rollup-template-sky
 
+## 1.8.0
+
+### Minor Changes
+
+- [#61](https://github.com/skyclouds2001/rollup-template-sky/pull/61) [`d700aac`](https://github.com/skyclouds2001/rollup-template-sky/commit/d700aace4cfbc7eda8216f707007eecd71dbb356) Thanks [@skyclouds2001](https://github.com/skyclouds2001)! - build: update eslint config
+
+- [#57](https://github.com/skyclouds2001/rollup-template-sky/pull/57) [`fbaa2ca`](https://github.com/skyclouds2001/rollup-template-sky/commit/fbaa2caa67eb6b74dc24819e47177a82a6d96d58) Thanks [@skyclouds2001](https://github.com/skyclouds2001)! - build: update prettier config
+
+### Patch Changes
+
+- [#30](https://github.com/skyclouds2001/rollup-template-sky/pull/30) [`113c810`](https://github.com/skyclouds2001/rollup-template-sky/commit/113c8101c2d7f48a46be431784cee9ffcf74004a) Thanks [@skyclouds2001](https://github.com/skyclouds2001)! - ci: remove useless permission
+
+- [#59](https://github.com/skyclouds2001/rollup-template-sky/pull/59) [`0f372e6`](https://github.com/skyclouds2001/rollup-template-sky/commit/0f372e683edab11fac9d2e2df82f05b8d7f99cf9) Thanks [@skyclouds2001](https://github.com/skyclouds2001)! - build: update lint script
+
+- [#58](https://github.com/skyclouds2001/rollup-template-sky/pull/58) [`41a72d6`](https://github.com/skyclouds2001/rollup-template-sky/commit/41a72d67f06a8c2660e546d313a7e6a989ab657b) Thanks [@skyclouds2001](https://github.com/skyclouds2001)! - build: use eslint helper function
+
+- [#72](https://github.com/skyclouds2001/rollup-template-sky/pull/72) [`9a91f06`](https://github.com/skyclouds2001/rollup-template-sky/commit/9a91f06266eeb961801c17089cb29e92e490b410) Thanks [@skyclouds2001](https://github.com/skyclouds2001)! - build: update dependabot config
+
+- [#30](https://github.com/skyclouds2001/rollup-template-sky/pull/30) [`4eb8d51`](https://github.com/skyclouds2001/rollup-template-sky/commit/4eb8d51172b9477e612c0d82ba599f037b6ede7e) Thanks [@skyclouds2001](https://github.com/skyclouds2001)! - build: add codeowners file
+
+- [#58](https://github.com/skyclouds2001/rollup-template-sky/pull/58) [`919021a`](https://github.com/skyclouds2001/rollup-template-sky/commit/919021a75865b41b4282d13f662cbbdbb254b50c) Thanks [@skyclouds2001](https://github.com/skyclouds2001)! - build: use global ignore helper function
+
+- [#55](https://github.com/skyclouds2001/rollup-template-sky/pull/55) [`8081c30`](https://github.com/skyclouds2001/rollup-template-sky/commit/8081c3058963f96147eeaad011178afff9185da1) Thanks [@skyclouds2001](https://github.com/skyclouds2001)! - build: simplify eslint-import-resolver-typescript plugin config
+
 ## 1.7.0
 
 ### Minor Changes
